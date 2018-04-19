@@ -1,0 +1,10 @@
+﻿Balsamiq mickup
+
+CV giới thiệu bản thân
+
+Nhiều phần (commnet,section)
+	-Menu
+	-Slide
+	-Content(Chart.js, đánh giá kĩ năng, các dự án đã làm)
+	-Contact(Maps, form contact)
+	-Footer
