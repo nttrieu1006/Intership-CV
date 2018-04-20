@@ -17,24 +17,30 @@
 <body>
 
     <!-- Menu -->
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top menu">
-        <a class="navbar-brand logo" href="#">
-            <img src="images/icons/logo.png" />
-        </a>
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link active" href="#">HOME</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">ABOUT</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">SKILLS</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">CONTACT</a>
-            </li>
-        </ul>
+    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light menu">
+        <a class="navbar-brand" href="#">
+            <img src="images/icons/logo.png">Nguyễn Tấn Triều</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">☰</button>
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="nav navbar-nav ml-auto">
+                <!-- <li class="nav-item active"> -->
+                <li>
+                    <a class="nav-link" href="#">HOME</a>
+                </li>
+                <!-- <li class="nav-item"> -->
+                <li>
+                    <a class="nav-link" href="#">ABOUT</a>
+                </li>
+                <!-- <li class="nav-item"> -->
+                <li>
+                    <a class="nav-link" href="#">SKILLS</a>
+                </li>
+                <!-- <li class="nav-item"> -->
+                <li>
+                    <a class="nav-link" href="#">CONTACT</a>
+                </li>
+            </ul>
+        </div>
     </nav>
     <!-- Slide -->
     <section>
@@ -90,61 +96,70 @@
         </ul>
     </div>
 
-    <div class="container">
-        <section class="info">
+    <section class="info">
+        <div class="container">
             <h2>INFOMATION</h2>
             <div class="row">
                 <div class="col-md-5">
                     <img src="images/images/test.jpg" id="avartar" />
                 </div>
-                <div class="col-md-7">
+                <div class="col-md-7" id="div-info">
+                    <p class="infomation">Full Name:Nguyễn Tấn Triều</p>
+                    <p class="infomation">BirthDate:10/6/1996</p>
+                    <p class="infomation">Study at Hutech University from 2014 to 2018</p>
+                    <p class="infomation">Now I am intersihiping at JANETO</p>
 
                 </div>
             </div>
-        </section>
-        <section class="info">
-            <h2>SKILLS</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <canvas class="chars" id="scm"></canvas>
-                    <br>
-                    <h3>specialized skills</h3>
-                </div>
-                <div class="col-md-6">
-                    <canvas class="chars" id="knm"></canvas>
-                    <br>
-                    <h3>Soft skills</h3>
-                </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-fuild" style="background-image: url('images/banners/banner.jpg');background-attachment: fixed;">
+            <div class="cn">The most beautiful thing about learning is that no one take that away form you.</div>
+        </div>
+    </section>
+    <section class="info">
+        <h2>SKILLS</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <canvas class="chars" id="scm"></canvas>
+                <br>
+                <h3>specialized skills</h3>
             </div>
-        </section>
+            <div class="col-md-6">
+                <canvas class="chars" id="knm"></canvas>
+                <br>
+                <h3>Soft skills</h3>
+            </div>
+        </div>
+    </section>
 
-        <section class="info">
-            <h2>CONTACT</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <form class="contact">
-                        <div class="form-group">
-                            <label for="exampleInputEmail1">Name</label>
-                            <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter Name">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Email</label>
-                            <input type="email" class="form-control" name="email" placeholder="Enter Email">
-                        </div>
-                        <div class="form-group">
-                            <label for="exampleInputPassword1">Message</label>
-                            <textarea class="form-control" name="message"></textarea>
-                        </div>
-                    </form>
-                    <button onclick="createContact()" class="btn btn-primary">Submit</button>                   
-                </div>
-                <div class="col-md-6">                        
-                        <div id="map">                         
-                        </div>                        
+    <section class="info">
+        <h2>CONTACT</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <form class="contact">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Name</label>
+                        <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Email</label>
+                        <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Message</label>
+                        <textarea class="form-control" name="message"></textarea>
+                    </div>
+                </form>
+                <button onclick="createContact()" class="btn btn-primary">Submit</button>
+            </div>
+            <div class="col-md-6">
+                <div id="map">
                 </div>
             </div>
-        </section>
-    </div>
+        </div>
+    </section>
 
 
 
@@ -158,21 +173,20 @@
     <!-- My Javascript -->
     <script src="js/main.js"></script>
     <script>
-            function initMap() {
-              var uluru = {lat: 10.816747, lng: 106.707629};
-              var map = new google.maps.Map(document.getElementById('map'), {
+        function initMap() {
+            var uluru = { lat: 10.816747, lng: 106.707629 };
+            var map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 15,
                 center: uluru
-              });
-              var marker = new google.maps.Marker({
+            });
+            var marker = new google.maps.Marker({
                 position: uluru,
                 map: map
-              });
-            }
-          </script>
-      <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ20LxPlX3gsibzr7HpFibsdHwDyHgMjs&callback=initMap">
-      </script>
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ20LxPlX3gsibzr7HpFibsdHwDyHgMjs&callback=initMap">
+    </script>
 </body>
 
 </html>

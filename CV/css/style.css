@@ -2,19 +2,18 @@
 .menu{
     background-color: #63B8FF!important;
 }
-
-.logo{
-    margin: 0 15%;
-}
-.logo img{
-    width: 40%
-}
-.menu ul li{
-    margin:0 20% 
-}
-.menu ul li a{
+a.nav-link{
     color:white!important;
     font-weight: bold
+}
+.menu img{
+width: 15%;
+}
+.active{
+    text-decoration: underline
+}
+.ml-auto{
+    margin-left: 0!important
 }
 .carousel-inner img {
     width: 100%;
@@ -64,13 +63,25 @@
     text-decoration:underline;
 }
 
-.container{
-    background-color: #2C3539;
-}
 section.info{
     background-color: white;
     margin: 0 -2% 20% -2%;
     padding-bottom: 5%;padding-top: 5%
+}
+p.infomation{
+    text-align: center;
+    margin-top: -2%;
+    font-weight: bold;
+    font-size: xx-large
+}
+.cn{
+    color:white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 15% 0 15% 0
+}
+#div-info{
+    margin-top: 7%
 }
 .info h2{
     margin-top: 5%;
