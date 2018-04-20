@@ -12,9 +12,6 @@ width: 15%;
 .active{
     text-decoration: underline
 }
-.ml-auto{
-    margin-left: 0!important
-}
 .carousel-inner img {
     width: 100%;
     height: 100%;
@@ -65,8 +62,6 @@ width: 15%;
 
 section.info{
     background-color: white;
-    margin: 0 -2% 20% -2%;
-    padding-bottom: 5%;padding-top: 5%
 }
 p.infomation{
     text-align: center;
@@ -75,10 +70,9 @@ p.infomation{
     font-size: xx-large
 }
 .cn{
-    color:white;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 15% 0 15% 0
+    
+    padding: 15% 0 15% 0;
+    background-image: url('../images/banners/banner4.jpg');background-attachment: fixed;
 }
 #div-info{
     margin-top: 7%
