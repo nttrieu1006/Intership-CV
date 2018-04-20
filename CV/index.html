@@ -10,7 +10,8 @@
     <!-- Boostrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <!-- FONT-AWSOME -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg"
+        crossorigin="anonymous">
     <!-- My Css -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
 
@@ -21,7 +22,7 @@
     <!-- Menu -->
     <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light menu">
         <a class="navbar-brand" href="#demo">
-            <img src="images/icons/logo.png">Nguyễn Tấn Triều</a>
+            <img src="images/icons/logo.png">NTT</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">☰</button>
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav ml-auto">
@@ -93,21 +94,31 @@
             </li>
         </ul>
     </div>
-    <div id="info"></div><br/>
-    <section class="info" >
+    <div id="info"></div>
+    <br/>
+    <section class="info">
         <div class="container">
             <h2>INFOMATION</h2>
             <div class="row">
                 <div class="col-md-5">
                     <img src="images/images/test.jpg" id="avartar" />
                 </div>
-                <div class="col-md-7" id="div-info">
-                    <p class="infomation">Nguyễn Tấn Triều</p>
-                    <p> I have study at HUTECH University from 2014 to 2018<br/>
-                        I'm a newbie on web developer<br/>
-                        Now, I'm intershiping at JANETO Company. I wan't improve my skill in this time
-                    </p>
-
+                <div class="col-md-7">
+                    <h3>Nguyễn Tấn Triều</h3><br>
+                    <ul class="education">
+                            <i class="fas fa-question"></i> Infomation
+                            <li>Birth Date: 10/06/1996</li>
+                            <li>From: Eakar-Daklak - Vietnam</li>
+                        </ul>
+                    <ul class="education">
+                        <i class="fas fa-graduation-cap"></i> Education
+                        <li>Study at Hutech University from 2014 to 2018</li>
+                        <li>Intership at JANETO Company</li>
+                    </ul>
+                    <ul class="education">
+                        <i class="fas fa-diagnoses"></i> Research Interests
+                        <li>Web development Technology</li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -117,8 +128,9 @@
             <div class="cn"></div>
         </div>
     </section>
-    <div id="skills"></div><br/>
-    <section class="info" >
+    <div id="skills"></div>
+    <br/>
+    <section class="info">
         <div class="container">
             <h2>SKILLS</h2>
             <div class="row">
@@ -134,13 +146,14 @@
                 </div>
             </div>
         </div>
-    </section>    
+    </section>
     <section>
         <div class="container-fuild">
             <div class="cn"></div>
         </div>
     </section>
-    <div id="contact"></div><br/>
+    <div id="contact"></div>
+    <br/>
     <section class="info">
         <div class="container">
             <h2>CONTACT</h2>
@@ -162,18 +175,37 @@
                     </form>
                     <button onclick="createContact()" class="btn btn-primary">Submit</button>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6" style="  background-color: antiquewhite">
                     <div class="cotact-info map">
                         <div class="address">
-                            <h3>Contact Me:</h3>
-                            <p>205 Nguyen Xi Street, 26, Binh Thanh Distrist, HCM City</p>
+                            <p>
+                                <i class="fas fa-map-marker"> 205 Nguyen Xi Street, 26, Binh Thanh Distrist, HCM City</i>
+                            </p>
+                            <p>
+                                <i class="fas fa-phone"> 0986183445</i>
+                            </p>
+                            <p>
+                                <i class="fas fa-envelope"> nttrieu1006@gmail.com</i>
+                            </p>
                         </div>
                     </div>
-                    <button onclick="seeMaps()"><i class="fas fa-angle-up"></i>See Maps</button>
-                </div>                
+                    <button onclick="seeMaps()" id="btnSeeMaps">
+                        <i class="fas fa-angle-up"></i>See Maps</button>
+                </div>
             </div>
         </div>
     </section>
+    <footer id="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <p class="wow bounceIn animated" data-wow-offset="50" data-wow-delay="0.3s" style="visibility: visible; animation-delay: 0.3s; animation-name: bounceIn;">
+                        Copyright © 2018 NTT
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
 
     <!-- Javascript -->
     <!-- Jquery -->
@@ -185,7 +217,7 @@
     <!-- My Javascript -->
     <script src="js/main.js"></script>
     <script>
-        
+
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ20LxPlX3gsibzr7HpFibsdHwDyHgMjs&callback=initMap">
     </script>

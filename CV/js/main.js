@@ -69,6 +69,7 @@ function createContact() {
 }
 
 function seeMaps() {
+    var html = '<div class="address"><p><i class="fas fa-map-marker">  205 Nguyen Xi Street, 26, Binh Thanh Distrist, HCM City</i></p><p><i class="fas fa-phone">  0986183445</i></p><p><i class="fas fa-envelope">  nttrieu1006@gmail.com</i></p></div>';
     if( $('.cotact-info').hasClass('map')) {        
         $('.cotact-info').html('<div id="map"></div>')
         $('.cotact-info').attr('class','cotact-info');
@@ -78,10 +79,11 @@ function seeMaps() {
     else {
         $('.cotact-info').attr('class','cotact-info map');        
         $('#map').remove();
-        $('.cotact-info').html('<div class="address"><h3>Contact Me:</h3><p>205 Nguyen Xi Street, 26, Binh Thanh Distrist, HCM City</p></div>')
+        $('.cotact-info').html(html)
     }
 }
 function initMap() {
+    var contentString = "205 Nguyễn Xí, P.26, Bình Thạnh, TPHCM";
     var uluru = { lat: 10.816747, lng: 106.707629 };
     var map = new google.maps.Map(document.getElementById('map'), {
         zoom: 15,
@@ -90,5 +92,9 @@ function initMap() {
     var marker = new google.maps.Marker({
         position: uluru,
         map: map
+    });   
+    var infowindow = new google.maps.InfoWindow({
+        content : contentString
     });
+    infowindow.open(map, marker);
 }

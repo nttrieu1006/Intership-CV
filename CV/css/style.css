@@ -10,7 +10,7 @@ a.nav-link{
 width: 15%;
 }
 .active{
-    text-decoration: underline
+    text-decoration: underline;
 }
 .carousel-inner img {
     width: 100%;
@@ -61,7 +61,11 @@ width: 15%;
 }
 
 section.info{
-    background-color: white;
+    background-color: white;   
+}
+section.info .container{
+    border-left: #2C3539 solid 1px;
+    border-right: #2C3539 solid 1px;
 }
 p.infomation{
     text-align: center;
@@ -74,17 +78,25 @@ p.infomation{
     padding: 15% 0 15% 0;
     background-image: url('../images/banners/banner4.jpg');background-attachment: fixed;
 }
-#div-info{
-    margin-top: 7%
-}
 .info h2{
-    margin-top: 5%;
+    margin: 5% auto;
     text-align: center;
     color:#63B8FF;
     font-weight: bold;
 }
 .info h3{
     text-align: center
+}
+ul{
+    font-size: large
+}
+.education i{
+    border: black solid 2px;
+}
+
+.education li{
+    margin-left: 15%;
+    color: darkred
 }
 img#avartar{
     display: block;
@@ -96,4 +108,22 @@ form{
 #map {
     height: 400px;
     width: 100%;
-   }
+}
+.address p i{
+    font-size: large;
+    color: coral;
+    margin: 2% auto;
+    text-align: center;
+}
+.address{
+    margin: 10% 0 0 5%;
+}
+#btnSeeMaps{
+    position: absolute;
+    bottom: 0;
+}
+#copyright {
+    padding: 20px;
+    background-color: #202020;
+    color: white;
+}
