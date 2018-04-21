@@ -6,7 +6,7 @@ var myPieChart = new Chart(ctx, {
     data: {
         datasets: [{
             data: [40, 30, 10, 20],
-            backgroundColor: ['rgba(255,0,0, 0.7)', 'rgba(255,255,0, 0.7)', 'rgba(0,0,0, 0.7)', 'rgba(0,0,255, 0.7)']
+            backgroundColor: ['rgba(255,0,0, 0.6)', 'rgba(255,255,0, 0.4)', 'rgba(0,0,0, 0.3)', 'rgba(0,0,255, 0.4)']
         }],
 
         // These labels appear in the legend and in the tooltips when hovering different arcs
@@ -27,7 +27,7 @@ var myPieChart = new Chart(ctx2, {
     data: {
         datasets: [{
             data: [40, 30, 30],
-            backgroundColor: ['rgba(255,0,0, 0.7)', 'rgba(255,255,0, 0.7)', 'rgba(0,0,0, 0.7)']
+            backgroundColor: ['rgba(255,0,0, 0.6)', 'rgba(255,255,0, 0.4)', 'rgba(0,0,0, 0.4)']
         }],
 
         // These labels appear in the legend and in the tooltips when hovering different arcs
@@ -67,9 +67,24 @@ function createContact() {
         });
     }
 }
-
+// Swiper JS
+var swiper = new Swiper('.swiper-container', {
+    effect: 'cube',
+    loop: true,
+    grabCursor: true,
+    cubeEffect: {
+      shadow: true,
+      slideShadows: true,
+      shadowOffset: 20,
+      shadowScale: 0.94,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+    },
+  });
+  //Map
 function seeMaps() {
-    var html = '<div class="address"><p><i class="fas fa-map-marker">  205 Nguyen Xi Street, 26, Binh Thanh Distrist, HCM City</i></p><p><i class="fas fa-phone">  0986183445</i></p><p><i class="fas fa-envelope">  nttrieu1006@gmail.com</i></p></div>';
+    var html = '<div class="address"><p><i class="fas fa-map-marker"></i><span> 205 Nguyen Xi Street, 26, Binh Thanh Distrist, HCM</span></p><p><i class="fas fa-phone"> </i><span> 0986183445</span></p><p><i class="fas fa-envelope"> </i><span> nttrieu1006@gmail.com</span></p></div>';
     if( $('.cotact-info').hasClass('map')) {        
         $('.cotact-info').html('<div id="map"></div>')
         $('.cotact-info').attr('class','cotact-info');
