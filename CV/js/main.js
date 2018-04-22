@@ -4,7 +4,6 @@ $(document).ready(function () {
     $('[data-spy="scroll"]').each(function () {
     var $spy = $(this).scrollspy('refresh');
   })
-
 });
 
 
@@ -56,7 +55,8 @@ function createContact() {
     var email = $('.contact input[name="email"]').val();
     var message = $('.contact textarea').val();
     if (name == "" || email == "") {
-        window.alert("Name and Email are required !");
+        $('#snackbar').html('Name and email are required!');
+        Snackbar();
     } else {
         $.ajax({
             url: "http://janeto.us.to:7752/api/contact",
@@ -70,13 +70,26 @@ function createContact() {
                 message: message
             },
             success: function (data) {
-                alert("Create successfully !");
+                $('#snackbar').html('Create Success!');
+                Snackbar();
             },
             error: function (err) {
-                alert(err);
+                $('#snackbar').html(''+err);
+                Snackbar();
             }
         });
     }
+}
+// Snackbar
+function Snackbar() {
+    // Get the snackbar DIV
+    var x = document.getElementById("snackbar");
+
+    // Add the "show" class to DIV
+    x.className = "show";
+
+    // After 3 seconds, remove the show class from DIV
+    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
 }
 // Slide
 var swiper = new Swiper('.swiper-container', {
