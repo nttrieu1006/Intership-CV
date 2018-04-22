@@ -20,6 +20,7 @@ var myPieChart = new Chart(ctx, {
     options: {}
 });
 
+//CharJS
 var ctx2 = document.getElementById('knm').getContext('2d');
 var myPieChart = new Chart(ctx2, {
 
@@ -40,6 +41,7 @@ var myPieChart = new Chart(ctx2, {
     options: {}
 });
 
+//Form contact
 function createContact() {
     var name = $('.contact input[name="name"]').val();
     var email = $('.contact input[name="email"]').val();
@@ -67,34 +69,39 @@ function createContact() {
         });
     }
 }
-// Swiper JS
+// Slide
 var swiper = new Swiper('.swiper-container', {
     effect: 'cube',
     loop: true,
     grabCursor: true,
     cubeEffect: {
-      shadow: true,
-      slideShadows: true,
-      shadowOffset: 20,
-      shadowScale: 0.94,
+        shadow: true,
+        slideShadows: true,
+        shadowOffset: 20,
+        shadowScale: 0.94,
     },
     pagination: {
-      el: '.swiper-pagination',
+        el: '.swiper-pagination',
     },
-  });
-  //Map
+});
+
+
+//Map
 function seeMaps() {
     var html = '<div class="address"><p><i class="fas fa-map-marker"></i><span> 205 Nguyen Xi Street, 26, Binh Thanh Distrist, HCM</span></p><p><i class="fas fa-phone"> </i><span> 0986183445</span></p><p><i class="fas fa-envelope"> </i><span> nttrieu1006@gmail.com</span></p></div>';
-    if( $('.cotact-info').hasClass('map')) {        
+    if ($('.cotact-info').hasClass('map')) {
         $('.cotact-info').html('<div id="map"></div>')
-        $('.cotact-info').attr('class','cotact-info');
-        $('contact-info button').val("Don't show");
+        $('.cotact-info').removeClass('map');
+        $('#div-contact').css('background-color', 'antiquewhite');
+        $('.address').attr('display', 'none');
         initMap();
     }
     else {
-        $('.cotact-info').attr('class','cotact-info map');        
+        $('.cotact-info').attr('class', 'cotact-info map');
         $('#map').remove();
+        $('#div-contact').css('background-color', ' rgba(209, 169, 134, 0.637)');
         $('.cotact-info').html(html)
+
     }
 }
 function initMap() {
@@ -107,9 +114,21 @@ function initMap() {
     var marker = new google.maps.Marker({
         position: uluru,
         map: map
-    });   
+    });
     var infowindow = new google.maps.InfoWindow({
-        content : contentString
+        content: contentString
     });
     infowindow.open(map, marker);
 }
+
+/* start typed element */
+//http://stackoverflow.com/questions/24874797/select-div-title-text-and-make-array-with-jquery
+var subElementArray = $.map($('.sub-element'), function (el) { return $(el).text(); });
+$(".element").typed({
+    strings: subElementArray,
+    typeSpeed: 30,
+    contentType: 'html',
+    showCursor: false,
+    loop: true,
+    loopCount: true,
+});

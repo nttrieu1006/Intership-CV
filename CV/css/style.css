@@ -120,6 +120,7 @@ form{
 #map {
     height: 400px;
     width: 100%;
+    padding-right: 50%
 }
 .address p i{
     font-size: large;
@@ -158,6 +159,14 @@ form{
     font-weight: bold;
     margin-bottom: 5%
 }
+.des-slide{
+    z-index: 999;
+    position: relative;
+    margin-top: -50%
+}
+#div-contact{
+    background-color: rgba(209, 169, 134, 0.637);margin-left: 5%;
+}
 .swiper-container {
     width: 50%;
     height: 350px;
@@ -174,3 +183,48 @@ form{
    font-size: xx-large;
     font-weight: 700;
   }
+/* start home */
+#home
+	{
+		background: url('../images/banners/banner.jpg') no-repeat;
+		background-size: 100% 100%;
+		padding-top: 160px;
+		padding-bottom: 100px;
+		min-height: 650px;
+	}
+#home h1
+	{
+		font-weight: 300;
+		font-size: 70px;
+		padding-bottom: 10px;
+	}
+#home h1 span
+	{
+		color: #28a7e9;
+		font-weight: bold;
+	}
+#home .btn
+	{
+		background: transparent;
+        border-radius: 10px;
+        border: coral 2px solid;
+		color: brown;
+		font-size: 16px;
+		font-weight: bold;
+		margin-top: 20px;
+		width: 180px;
+		height: 60px;
+		padding-top: 18px;
+		-webkit-transition: all 0.4s ease-in-out;
+		        transition: all 0.4s ease-in-out;
+	}
+#home .btn:hover
+	{
+		background: #28a7e9;
+		border-color: transparent;
+	}
+.element {
+	height: 60px;
+	font-size: 16px;
+}
+/* end home */
