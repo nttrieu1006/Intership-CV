@@ -1,4 +1,13 @@
-$(document).ready(function () { });
+$(document).ready(function () { 
+    // ScrollSpy
+    $('body').scrollspy({ target: '#navbar-example' });
+    $('[data-spy="scroll"]').each(function () {
+    var $spy = $(this).scrollspy('refresh');
+  })
+
+});
+
+
 var ctx = document.getElementById('scm').getContext('2d');
 var myPieChart = new Chart(ctx, {
 

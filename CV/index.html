@@ -19,77 +19,54 @@
 
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#navbar-example">
 
     <!-- Menu -->
-    <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light menu">
-        <a class="navbar-brand" href="#home">
-            <img src="images/icons/logo.png">NTT</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">☰</button>
-        <div class="collapse navbar-collapse" id="navbar-collapse">
-            <ul class="nav navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#home">HOME</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#info">ABOUT</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">SKILLS</a>
-                </li>
-                <li class="nav-item">
+    <section class="container-fuild">
+        <nav class="navbar fixed-top navbar-expand-sm navbar-light bg-light menu" id="navbar-example">
+            <a class="navbar-brand" href="#home">
+                <img src="images/icons/logo.png">NTT</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse">☰</button>
+            <div class="collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#home">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#info">ABOUT</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills">SKILLS</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#project">PROJECTS</a>
                     </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">CONTACT</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-    <!-- Slide -->
-    <!-- <section>
-        <div id="demo" class="carousel slide" data-ride="carousel">
-            <ul class="carousel-indicators">
-                <li data-target="#demo" data-slide-to="0" class="active"></li>
-                <li data-target="#demo" data-slide-to="1"></li>
-                <li data-target="#demo" data-slide-to="2"></li>                
-            </ul>
-            <div class="carousel-inner">         
-                <div class="carousel-item active">
-                    <img src="images/banners/banner.jpg" width="1100" height="500">                    
-                </div>                
-                <div class="carousel-item">
-                    <img src="images/banners/banner2.jpg" width="1100" height="500">
-                </div>
-                <div class="carousel-item">
-                    <img src="images/banners/banner3.jpg" width="1100" height="500">
-                </div>                
-            </div>            
-            <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#demo" data-slide="next">
-                <span class="carousel-control-next-icon"></span>
-            </a>
-        </div>
-    </section> -->
-     <!-- start home -->
-     <section id="home">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-offset-2 col-md-8 data-home">
-                        <h1 class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">Student, Researcher, Developer is <span>NTT</span></h1>
-                        <div class="element">
-                            <div class="sub-element">1. Study not what the world is doing, but what you can do for it.</div>
-                            <div class="sub-element">2. Live as if you were to die tomorrow, learn as if you were to live forever.</div>
-                            <div class="sub-element">3. Let your customers create your business.</div>
-                        </div>
-                        <a data-scroll href="#info" class="btn btn-default wow fadeInUp" data-wow-offset="50" data-wow-delay="0.6s">GET STARTED</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+    <!-- start home -->
+    <section id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8 data-home">
+                    <h1 class="wow fadeIn" data-wow-offset="50" data-wow-delay="0.9s">Student, Researcher, Developer is
+                        <span>NTT</span>
+                    </h1>
+                    <div class="element">
+                        <div class="sub-element">1. Study not what the world is doing, but what you can do for it.</div>
+                        <div class="sub-element">2. Live as if you were to die tomorrow, learn as if you were to live forever.</div>
+                        <div class="sub-element">3. Let your customers create your business.</div>
                     </div>
+                    <a data-scroll href="#info" class="btn btn-default wow fadeInUp" data-wow-offset="50" data-wow-delay="0.6s">GET STARTED</a>
                 </div>
             </div>
-        </section>
-        <!-- end home -->
+        </div>
+    </section>
+    <!-- end home -->
     <!-- Sticky icon -->
     <div class="sticky-container">
         <ul class="sticky">
@@ -177,8 +154,8 @@
         </div>
     </section>
     <div id="project" class="container info">
-            <br/>            
-        </div>
+        <br/>
+    </div>
     <section>
         <div class="container-fuild">
             <div class="cn2">
@@ -186,10 +163,18 @@
                 <!-- Swiper -->
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image:url('images/projects/project1.jpg')"><p>WebSite Đọc truyện</p></div>                         
-                        <div class="swiper-slide" style="background-image:url('images/projects/project2.jpg')"><p>WebSite Bán hàng online</p></div>
-                        <div class="swiper-slide" style="background-image:url('images/projects/project3.jpg')"><p>WebSite Du lịch</p></div>
-                        <div class="swiper-slide" style="background-image:url('images/projects/project4.jpg')"><p>Ứng dụng cho thuê xe</p></div>
+                        <div class="swiper-slide" style="background-image:url('images/projects/project1.jpg')">
+                            <p>WebSite Đọc truyện</p>
+                        </div>
+                        <div class="swiper-slide" style="background-image:url('images/projects/project2.jpg')">
+                            <p>WebSite Bán hàng online</p>
+                        </div>
+                        <div class="swiper-slide" style="background-image:url('images/projects/project3.jpg')">
+                            <p>WebSite Du lịch</p>
+                        </div>
+                        <div class="swiper-slide" style="background-image:url('images/projects/project4.jpg')">
+                            <p>Ứng dụng cho thuê xe</p>
+                        </div>
                     </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>

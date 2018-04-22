@@ -1,4 +1,7 @@
 *{}
+.body{
+    position: relative;
+}
 .menu{
     background-color: #63B8FF!important;
 }
@@ -9,8 +12,9 @@ a.nav-link{
 .menu img{
 width: 15%;
 }
-.active{
+ul .active{
     text-decoration: underline;
+    color:red!important;
 }
 .carousel-inner img {
     width: 100%;
