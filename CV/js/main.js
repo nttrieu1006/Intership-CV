@@ -3,7 +3,8 @@ $(document).ready(function () {
     $('body').scrollspy({ target: '#navbar-example' });
     $('[data-spy="scroll"]').each(function () {
     var $spy = $(this).scrollspy('refresh');
-  })
+  });
+  scroll();
 });
 
 
@@ -154,3 +155,22 @@ $(".element").typed({
     loop: true,
     loopCount: true,
 });
+
+// thời gian di trượt 0.75s ( 1000 = 1s )
+function scroll(){
+    $("a#menu-home").bind('click', function () {
+        $("html, body").animate({ scrollTop: $('#home').offset().top }, 1000);
+     });
+     $("a#menu-info").bind('click', function () {
+        $("html, body").animate({ scrollTop: $('#info').offset().top }, 1000);
+     });   
+     $("a#menu-skill").bind('click', function () {
+        $("html, body").animate({ scrollTop: $('#skills').offset().top }, 1000);
+     });  
+     $("a#menu-project").bind('click', function () {
+        $("html, body").animate({ scrollTop: $('#project').offset().top }, 1000);
+     });  
+     $("a#menu-contact").bind('click', function () {
+        $("html, body").animate({ scrollTop: $('#contact').offset().top }, 1000);
+     });  
+}
