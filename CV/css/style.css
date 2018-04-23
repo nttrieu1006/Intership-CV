@@ -162,7 +162,7 @@ form{
 .cn2{    
     padding: 10% 0 10% 0;
     background-image: url('../images/banners/banner5.jpg');background-attachment: fixed;
-    background-size: 100% 100%;
+    background-size: cover;
 }
 .cn2 h2{    
     text-align: center;
@@ -197,10 +197,13 @@ form{
 /* start home */
 #home
 	{
-		background: url('../images/banners/banner.jpg') no-repeat;
-		background-size: 100% 100%;
-		padding-top: 160px;
-		padding-bottom: 400px;
+		background: url('../images/banners/banner.jpg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+        padding-top: 15%;
+        padding-bottom: 15%
 	}
 #home h1
 	{
