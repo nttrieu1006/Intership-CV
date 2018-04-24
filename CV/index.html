@@ -108,7 +108,7 @@
                 </h3>
                 <br>
                 <ul class="education">
-                    <i class="fas fa-question"></i> Infomation
+                    <i class="fas fa-diagnoses"></i> Infomation
                     <li>Birth Date: 10/06/1996</li>
                     <li>From: Eakar - Daklak - Vietnam</li>
                 </ul>
@@ -116,9 +116,6 @@
                     <i class="fas fa-graduation-cap"></i> Education
                     <li>Study at Hutech University from 2014 to 2018</li>
                     <li>Intership at JANETO Company</li>
-                </ul>
-                <ul class="education">
-                    <i class="fas fa-diagnoses"></i> Research Interests
                     <li>Web development Technology</li>
                 </ul>
             </div>
@@ -149,22 +146,24 @@
         <div class="container-fuild" id="project">
             <div class="cn2">
                 <h2>MY PROJECTS</h2>
-                <!-- Swiper -->                
+                <!-- Swiper -->
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                      <div class="swiper-slide" style="background-image:url('images/projects/project1.jpg')"></div>
-                      <div class="swiper-slide" style="background-image:url('images/projects/project2.jpg')"></div>
-                      <div class="swiper-slide" style="background-image:url('images/projects/project3.jpg')"></div>
-                      <div class="swiper-slide" style="background-image:url('images/projects/project4.jpg')"></div>
-                      </div>
+                        <div class="swiper-slide" style="background-image:url('images/projects/project1.jpg')">
+                            <h3>Website đọc truyện</h3>
+                        </div>
+                        <div class="swiper-slide" style="background-image:url('images/projects/project2.jpg')"><h3>Shop online</h3></div>
+                        <div class="swiper-slide" style="background-image:url('images/projects/project3.jpg')"><h3>Website du lịch</h3></div>
+                        <div class="swiper-slide" style="background-image:url('images/projects/project4.jpg')"><h3>Ứng dụng cho thuê xe</h3></div>
+                    </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
-                  </div>
+                </div>
             </div>
         </div>
         </div>
     </section>
-    <section class="container info" id="contact">
+    <section class="container info con-map" id="contact">
         <h2>CONTACT</h2>
         <hr>
         <div class="row">
@@ -186,7 +185,8 @@
                 <button onclick="createContact()" style="color: #fff!important;
                 background-color: #616161!important">Submit</button>
             </div>
-            <div class="col-md-6" id="map">
+            <div class="col-md-6 mapss">
+                <div id="map"></div>
             </div>
         </div>
     </section>
@@ -208,7 +208,7 @@
     <!-- Swiper JS -->
     <script src="libraries/swiper/dist/js/swiper.min.js"></script>
     <!-- Toast -->
-    <script src="libraries/toastJs/js/toasttr.js"></script>    
+    <script src="libraries/toastJs/js/toasttr.js"></script>
     <!-- Typed JS -->
     <script src="js/typed.js"></script>
     <!-- Chart JS -->

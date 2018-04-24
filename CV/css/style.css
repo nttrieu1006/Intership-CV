@@ -68,9 +68,9 @@ ul .active{
     text-decoration:underline;
 }
 
-.info{
+/* .info{
     padding: 5% 0;
-}
+} */
 p.infomation{
     text-align: center;
     margin-top: -2%;
@@ -82,6 +82,9 @@ p.infomation{
     padding: 40% 0 20% 0;
     background-image: url('../images/banners/banner4.jpg');background-attachment: fixed;
     background-size: 100% 100%;
+}
+.info{
+    padding: 5%
 }
 .info h2{
     
@@ -129,7 +132,7 @@ form{
 #map {
     height: 300px;
     width: 100%;
-
+    display: block
 }
 .address p i{
     font-size: large;
@@ -183,14 +186,12 @@ form{
     width: 60%;
     min-height: 500px;
   }
-@media only screen and (max-width: 600px) {
-    .swiper-slide {
-        background-position: center;
-        background-size: cover;
-        width: 60%;
-        min-height: 250px;
-      }
-}
+  .swiper-slide h3{
+    position: absolute;
+    left:35%;
+    top:-8%;
+    color:white
+  }
 /* start home */
 #home
 	{
@@ -259,33 +260,32 @@ form{
     bottom: 30px; /* 30px from the bottom */
 }
 
-/* Show the snackbar when clicking on a button (class added with JavaScript) */
-#snackbar.show {
-    visibility: visible; /* Show the snackbar */
-
-/* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
-However, delay the fade out process for 2.5 seconds */
-    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-    animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
-
-/* Animations to fade the snackbar in and out */
-@-webkit-keyframes fadein {
-    from {bottom: 0; opacity: 0;} 
-    to {bottom: 30px; opacity: 1;}
-}
-
-@keyframes fadein {
-    from {bottom: 0; opacity: 0;}
-    to {bottom: 30px; opacity: 1;}
-}
-
-@-webkit-keyframes fadeout {
-    from {bottom: 30px; opacity: 1;} 
-    to {bottom: 0; opacity: 0;}
-}
-
-@keyframes fadeout {
-    from {bottom: 30px; opacity: 1;}
-    to {bottom: 0; opacity: 0;}
+@media only screen and (max-width: 600px) {
+    .body{
+        position: relative;
+    }
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 350px;
+      }
+      .info{
+          padding: 10% 15px
+      }
+      #home h1{
+        color:darkorange;
+      }
+      .info .col-md-6{
+        margin-bottom: 20%
+      }
+      .con-map{
+        padding-bottom: 0%
+      }
+      .con-map .mapss{
+        margin-bottom: 0%
+      }
+      #map{
+          display: block;
+        padding-bottom: 0%
+      }
 }
