@@ -17,7 +17,8 @@ width: 15%;
 }
 ul .active{
     color:orangered!important;
-    background-color: rgba(0,144,255,0.3)
+    background-color: rgba(0,144,255,0.3);
+    border-radius:20%;
 }
 .carousel-inner img {
     width: 100%;
@@ -68,10 +69,7 @@ ul .active{
 }
 
 .info{
-    background-color: antiquewhite;   
-    border-left: #2C3539 solid 1px;
-    border-right: #2C3539 solid 1px;
-    padding-bottom: 5%
+    padding: 5% 0;
 }
 p.infomation{
     text-align: center;
@@ -81,7 +79,7 @@ p.infomation{
 }
 .cn{
     
-    padding: 15% 0 15% 0;
+    padding: 40% 0 20% 0;
     background-image: url('../images/banners/banner4.jpg');background-attachment: fixed;
     background-size: 100% 100%;
 }
@@ -129,9 +127,9 @@ form{
     margin: auto
 }
 #map {
-    height: 400px;
+    height: 300px;
     width: 100%;
-    padding-right: 50%
+
 }
 .address p i{
     font-size: large;
@@ -149,10 +147,6 @@ form{
     font-weight: bold;
     font-size: inherit;
     color: black
-}
-#btnSeeMaps{
-    position: absolute;
-    bottom: 0;
 }
 #copyright {
     padding: 20px;
@@ -179,21 +173,24 @@ form{
     background-color: rgba(209, 169, 134, 0.637);margin-left: 5%;
 }
 .swiper-container {
-    width: 50%;
-    height: 350px;
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .swiper-slide {
     background-position: center;
-    background-size: 100% 100%;
+    background-size: cover;
+    width: 60%;
+    min-height: 500px;
   }
-  .swiper-slide p{
-   color:red;
-    position: absolute; 
-   bottom: 0;
-   left: 40%;
-   font-size: xx-large;
-    font-weight: 700;
-  }
+@media only screen and (max-width: 600px) {
+    .swiper-slide {
+        background-position: center;
+        background-size: cover;
+        width: 60%;
+        min-height: 250px;
+      }
+}
 /* start home */
 #home
 	{

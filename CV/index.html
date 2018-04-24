@@ -9,6 +9,8 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <!-- Swiper -->
     <link rel="stylesheet" href="libraries/swiper/dist/css/swiper.min.css">
+    <!-- Toast -->
+    <link rel="stylesheet" href="libraries/toastJs/css/toasttr.css">
     <!-- Boostrap -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
     <!-- FONT-AWSOME -->
@@ -93,12 +95,7 @@
             </li>
         </ul>
     </div>
-    <div id="info" class="container info pagi">
-        <br/>
-        <br/>
-        <br/>
-    </div>
-    <section class="container info">
+    <section class="container info" id="info">
         <h2>INFOMATION</h2>
         <hr>
         <div class="row">
@@ -132,19 +129,14 @@
             <div class="cn"></div>
         </div>
     </section>
-    <div id="skills" class="container info pagi">
-        <br/>
-        <br/>
-        <br/>
-    </div>
-    <section class="container info">
+    <section class="container info" id="skills">
         <h2>SKILLS</h2>
         <hr>
         <div class="row">
             <div class="col-md-6">
                 <canvas class="chars" id="scm"></canvas>
                 <br>
-                <h3>specialized skills</h3>
+                <h3>Specialized skills</h3>
             </div>
             <div class="col-md-6">
                 <canvas class="chars" id="knm"></canvas>
@@ -153,41 +145,26 @@
             </div>
         </div>
     </section>
-    <div id="project" class="container info">
-        <br/>
-    </div>
     <section>
-        <div class="container-fuild">
+        <div class="container-fuild" id="project">
             <div class="cn2">
                 <h2>MY PROJECTS</h2>
-                <!-- Swiper -->
+                <!-- Swiper -->                
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide" style="background-image:url('images/projects/project1.jpg')">
-                            <p>WebSite Đọc truyện</p>
-                        </div>
-                        <div class="swiper-slide" style="background-image:url('images/projects/project2.jpg')">
-                            <p>WebSite Bán hàng online</p>
-                        </div>
-                        <div class="swiper-slide" style="background-image:url('images/projects/project3.jpg')">
-                            <p>WebSite Du lịch</p>
-                        </div>
-                        <div class="swiper-slide" style="background-image:url('images/projects/project4.jpg')">
-                            <p>Ứng dụng cho thuê xe</p>
-                        </div>
-                    </div>
+                      <div class="swiper-slide" style="background-image:url('images/projects/project1.jpg')"></div>
+                      <div class="swiper-slide" style="background-image:url('images/projects/project2.jpg')"></div>
+                      <div class="swiper-slide" style="background-image:url('images/projects/project3.jpg')"></div>
+                      <div class="swiper-slide" style="background-image:url('images/projects/project4.jpg')"></div>
+                      </div>
                     <!-- Add Pagination -->
                     <div class="swiper-pagination"></div>
-                </div>
+                  </div>
             </div>
         </div>
+        </div>
     </section>
-    <div id="contact" class="container info pagi">
-        <br/>
-        <br/>
-        <br/>
-    </div>
-    <section class="container info">
+    <section class="container info" id="contact">
         <h2>CONTACT</h2>
         <hr>
         <div class="row">
@@ -195,40 +172,21 @@
                 <form class="contact">
                     <div class="form-group">
                         <label for="exampleInputEmail1">Name</label>
-                        <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter Name">
+                        <input type="text" class="form-control" name="name" aria-describedby="emailHelp" placeholder="Enter your name">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Email</label>
-                        <input type="email" class="form-control" name="email" placeholder="Enter Email">
+                        <input type="email" class="form-control" name="email" placeholder="Enter your email">
                     </div>
                     <div class="form-group">
                         <label for="exampleInputPassword1">Message</label>
-                        <textarea class="form-control" name="message"></textarea>
+                        <textarea class="form-control" name="message" rows="4"></textarea>
                     </div>
                 </form>
                 <button onclick="createContact()" style="color: #fff!important;
                 background-color: #616161!important">Submit</button>
-                <div id="snackbar"></div>
             </div>
-            <div class="col-md-5" id="div-contact">
-                <div class="cotact-info map">
-                    <div class="address">
-                        <p>
-                            <i class="fas fa-map-marker"></i>
-                            <span> 205 Nguyen Xi Street, 26, Binh Thanh Distrist, HCM</span>
-                        </p>
-                        <p>
-                            <i class="fas fa-phone"> </i>
-                            <span> 0986183445</span>
-                        </p>
-                        <p>
-                            <i class="fas fa-envelope"> </i>
-                            <span> nttrieu1006@gmail.com</span>
-                        </p>
-                    </div>
-                </div>
-                <button onclick="seeMaps()" id="btnSeeMaps" class="btn-primary">
-                    <i class="fas fa-angle-up"></i>See Maps</button>
+            <div class="col-md-6" id="map">
             </div>
         </div>
     </section>
@@ -249,7 +207,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- Swiper JS -->
     <script src="libraries/swiper/dist/js/swiper.min.js"></script>
-    <!-- <script src="libraries/swiper/dist/js/swiper.esm.bundle.js"></script> -->
+    <!-- Toast -->
+    <script src="libraries/toastJs/js/toasttr.js"></script>    
     <!-- Typed JS -->
     <script src="js/typed.js"></script>
     <!-- Chart JS -->

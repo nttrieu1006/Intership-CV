@@ -56,8 +56,8 @@ function createContact() {
     var email = $('.contact input[name="email"]').val();
     var message = $('.contact textarea').val();
     if (name == "" || email == "") {
-        $('#snackbar').html('Name and email are required!');
-        Snackbar();
+        toastr.options.closeButton = true;
+        toastr.warning('Name and Email are required!');        
     } else {
         $.ajax({
             url: "http://janeto.us.to:7752/api/contact",
@@ -70,63 +70,36 @@ function createContact() {
                 email: email,
                 message: message
             },
-            success: function (data) {
-                $('#snackbar').html('Create Success!');
-                Snackbar();
+            success: function (data) {                
+                toastr.options.closeButton = true;
+                toastr.success('Thank you your submit!');
             },
             error: function (err) {
-                $('#snackbar').html(''+err);
-                Snackbar();
+                toastr.options.closeButton = true;
+                toastr.error(''+err);
             }
         });
     }
 }
-// Snackbar
-function Snackbar() {
-    // Get the snackbar DIV
-    var x = document.getElementById("snackbar");
-
-    // Add the "show" class to DIV
-    x.className = "show";
-
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
-}
-// Slide
+//Swiper
 var swiper = new Swiper('.swiper-container', {
-    effect: 'cube',
-    loop: true,
+    effect: 'coverflow',
     grabCursor: true,
-    cubeEffect: {
-        shadow: true,
-        slideShadows: true,
-        shadowOffset: 20,
-        shadowScale: 0.94,
+    centeredSlides: true,
+    loop:true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows : true,
     },
     pagination: {
-        el: '.swiper-pagination',
+      el: '.swiper-pagination',
     },
-});
+  });
 
-
-//Map
-function seeMaps() {
-    var html = '<div class="address"><p><i class="fas fa-map-marker"></i><span> 205 Nguyen Xi Street, 26, Binh Thanh Distrist, HCM</span></p><p><i class="fas fa-phone"> </i><span> 0986183445</span></p><p><i class="fas fa-envelope"> </i><span> nttrieu1006@gmail.com</span></p></div>';
-    if ($('.cotact-info').hasClass('map')) {
-        $('.cotact-info').html('<div id="map"></div>')
-        $('.cotact-info').removeClass('map');
-        $('#div-contact').css('background-color', 'antiquewhite');
-        $('.address').attr('display', 'none');
-        initMap();
-    }
-    else {
-        $('.cotact-info').attr('class', 'cotact-info map');
-        $('#map').remove();
-        $('#div-contact').css('background-color', ' rgba(209, 169, 134, 0.637)');
-        $('.cotact-info').html(html)
-
-    }
-}
 function initMap() {
     var contentString = "205 Nguyễn Xí, P.26, Bình Thạnh, TPHCM";
     var uluru = { lat: 10.816747, lng: 106.707629 };
