@@ -79,7 +79,7 @@ p.infomation{
 }
 .cn{
     
-    padding: 40% 0 20% 0;
+    padding: 30% 0 20% 0;
     background-image: url('../images/banners/banner4.jpg');background-attachment: fixed;
     background-size: 100% 100%;
 }
@@ -91,6 +91,7 @@ p.infomation{
     text-align: center;
     color:#63B8FF;
     font-weight: bold;
+    text-transform: uppercase;
 }
 .info h3{
     text-align: center;
@@ -165,7 +166,8 @@ form{
     text-align: center;
     color:#63B8FF;
     font-weight: bold;
-    margin-bottom: 5%
+    margin-bottom: 5%;
+    text-transform: uppercase;
 }
 .des-slide{
     z-index: 999;
@@ -187,10 +189,11 @@ form{
     min-height: 500px;
   }
   .swiper-slide h3{
-    position: absolute;
-    left:35%;
-    top:-8%;
-    color:white
+    position: relative;
+    text-align: center;
+    color:white;
+    margin-top: -5%;
+    text-transform: capitalize;
   }
 /* start home */
 #home
@@ -242,24 +245,41 @@ form{
     font-size: 16px;
     color:mediumblue
 }
-/* end home */
-
-/* The snackbar - position it at the bottom and in the middle of the screen */
-#snackbar {
-    visibility: hidden; /* Hidden by default. Visible on click */
-    min-width: 250px; /* Set a default minimum width */
-    margin-left: -125px; /* Divide value of min-width by 2 */
-    background-color: #333; /* Black background color */
-    color: #fff; /* White text color */
-    text-align: center; /* Centered text */
-    border-radius: 2px; /* Rounded borders */
-    padding: 16px; /* Padding */
-    position: fixed; /* Sit on top of the screen */
-    z-index: 1; /* Add a z-index if needed */
-    left: 50%; /* Center the snackbar */
-    bottom: 30px; /* 30px from the bottom */
+#contact button{
+    color: #fff!important;
+    background-color: #616161!important;
+    width: 100%;
 }
-
+#contact button:hover{
+    color: #fff!important;
+    background-color: #28a7e9!important;
+    width: 100%;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+/* end home */
+@media only screen and (max-width: 1024px) {
+    .swiper-slide h3{
+        position: relative;
+        text-align: center;
+        color:white;
+        margin-top: -10%
+      }
+    .info{
+        padding: 10% 15px
+    }
+      .cn2{
+        padding: 10% 15px
+      }
+      #home
+	{
+        padding-top: 30%;
+        padding-bottom: 30%
+    }
+    /* .con-map{
+        padding-bottom: 0%
+      } */
+}
 @media only screen and (max-width: 600px) {
     .body{
         position: relative;
@@ -267,10 +287,11 @@ form{
     .swiper-slide {
         background-position: center;
         background-size: cover;
-        width: 350px;
+        width: 80%;
+        min-height: 300px;
       }
       .info{
-          padding: 10% 15px
+          padding: 15% 15px
       }
       #home h1{
         color:darkorange;
@@ -279,7 +300,7 @@ form{
         margin-bottom: 20%
       }
       .con-map{
-        padding-bottom: 0%
+        padding-bottom: 5%
       }
       .con-map .mapss{
         margin-bottom: 0%
@@ -287,5 +308,15 @@ form{
       #map{
           display: block;
         padding-bottom: 0%
+      }
+      .cn2{
+        padding: 15% 15px
+      }
+      .swiper-slide h3{
+        position: relative;
+        text-align: center;
+        color:white;
+        margin-top: -10%;
+        font-size: smaller
       }
 }

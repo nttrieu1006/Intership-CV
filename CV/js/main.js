@@ -1,10 +1,10 @@
-$(document).ready(function () { 
+$(document).ready(function () {
     // ScrollSpy
     $('body').scrollspy({ target: '#navbar-example' });
     $('[data-spy="scroll"]').each(function () {
-    var $spy = $(this).scrollspy('refresh');
-  });
-  scroll();
+        var $spy = $(this).scrollspy('refresh');
+    });
+    scroll();
 });
 
 
@@ -57,7 +57,7 @@ function createContact() {
     var message = $('.contact textarea').val();
     if (name == "" || email == "") {
         toastr.options.closeButton = true;
-        toastr.warning('Name and Email are required!');        
+        toastr.warning('Name and Email are required!');
     } else {
         $.ajax({
             url: "http://janeto.us.to:7752/api/contact",
@@ -70,13 +70,16 @@ function createContact() {
                 email: email,
                 message: message
             },
-            success: function (data) {                
+            success: function (data) {
                 toastr.options.closeButton = true;
                 toastr.success('Thank you your submit!');
+                $('.contact input[name="name"]').val("");
+                $('.contact input[name="email"]').val("");
+                $('.contact textarea').val("");
             },
             error: function (err) {
                 toastr.options.closeButton = true;
-                toastr.error(''+err);
+                toastr.error('' + err);                
             }
         });
     }
@@ -86,19 +89,19 @@ var swiper = new Swiper('.swiper-container', {
     effect: 'coverflow',
     grabCursor: true,
     centeredSlides: true,
-    loop:true,
+    loop: true,
     slidesPerView: 'auto',
     coverflowEffect: {
-      rotate: 50,
-      stretch: 0,
-      depth: 100,
-      modifier: 1,
-      slideShadows : true,
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
     },
     pagination: {
-      el: '.swiper-pagination',
+        el: '.swiper-pagination',
     },
-  });
+});
 
 function initMap() {
     var contentString = "205 Nguyễn Xí, P.26, Bình Thạnh, TPHCM";
@@ -130,20 +133,20 @@ $(".element").typed({
 });
 
 // thời gian di trượt 0.75s ( 1000 = 1s )
-function scroll(){
+function scroll() {
     $("a#menu-home").bind('click', function () {
         $("html, body").animate({ scrollTop: $('#home').offset().top }, 1000);
-     });
-     $("a#menu-info").bind('click', function () {
+    });
+    $("a#menu-info").bind('click', function () {
         $("html, body").animate({ scrollTop: $('#info').offset().top }, 1000);
-     });   
-     $("a#menu-skill").bind('click', function () {
+    });
+    $("a#menu-skill").bind('click', function () {
         $("html, body").animate({ scrollTop: $('#skills').offset().top }, 1000);
-     });  
-     $("a#menu-project").bind('click', function () {
+    });
+    $("a#menu-project").bind('click', function () {
         $("html, body").animate({ scrollTop: $('#project').offset().top }, 1000);
-     });  
-     $("a#menu-contact").bind('click', function () {
+    });
+    $("a#menu-contact").bind('click', function () {
         $("html, body").animate({ scrollTop: $('#contact').offset().top }, 1000);
-     });  
+    });
 }
